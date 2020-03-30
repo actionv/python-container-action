@@ -1,0 +1,20 @@
+name: "A Python Container Action Template"
+description: "Get started with Python Container action"
+author: "yanglbme"
+branding:
+  icon: 'copy'
+  color: 'gray-dark'
+inputs:
+  username:
+    description: "Username"
+    require: true
+  age:
+    description: "Age"
+    require: false
+    default: 18
+outputs:
+  res:
+    description: "Result from the action"
+runs:
+  using: "docker"
+  image: "Dockerfile"
