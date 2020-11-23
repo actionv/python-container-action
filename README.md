@@ -18,9 +18,11 @@
 如果你想基于 Python 容器开发 GitHub Actions，可以在[当前仓库](https://github.com/actionv/python-container-action)上点击 <kbd>[Use this template](https://github.com/actionv/python-container-action/generate)</kbd>，基于当前模板创建一个新的存储库。
 
 ## 使用
+
 在此处描述如何使用你的 Action。
 
 ### Workflow 示例
+
 ```yml
 name: My Workflow
 on: [push, pull_request]
@@ -28,31 +30,34 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Run action
+      - uses: actions/checkout@v2
+      - name: Run action
 
-      # 放置你的 Action 仓库
-      uses: username/myaction@master
+        # 放置你的 Action 仓库
+        uses: username/myaction@main
 
-      # Action 的输入参数
-      with:
-        username: yanglbme
+        # Action 的输入参数
+        with:
+          username: yanglbme
 ```
 
 ### 入参
-| 参数 | 描述 | 是否必传 | 默认值 |
-|---|---|---|---|
-| username | 用户名 | 是 | - |
-| age | 年龄 | 否 | 18 |
+
+| 参数     | 描述   | 是否必传 | 默认值 |
+| -------- | ------ | -------- | ------ |
+| username | 用户名 | 是       | -      |
+| age      | 年龄   | 否       | 18     |
 
 ### 出参
+
 | 参数 | 描述 |
-|---|---|
-| res |  | 一个输出参数 |
+| ---- | ---- | ------------ |
+| res  |      | 一个输出参数 |
 
 ## 实例
 
 ### 输入
+
 ```yml
 with:
   username: yanglbme
@@ -60,14 +65,15 @@ with:
 ```
 
 ### 输出
+
 ```yml
 steps:
-- uses: actions/checkout@master
+- uses: actions/checkout@v2
 - name: Run action
   id: myaction
 
   # 放置你的 Action 仓库
-  uses: me/myaction@master
+  uses: me/myaction@main
 
   # Action 的输入参数
   with:
@@ -78,3 +84,7 @@ steps:
     run: |
     echo "Outputs - ${{ steps.myaction.outputs.res }}"
 ```
+
+## License
+
+MIT

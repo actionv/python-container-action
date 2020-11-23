@@ -1,12 +1,13 @@
-import os
 import requests
+
+from actions_toolkit import core
 
 
 def main():
     requests.get('https://httpbin.org/get?code=0')
-    username = os.environ["INPUT_USERNAME"]
+    username = core.get_input('username')
     res = f"Hello {username}"
-    print(f"::set-output name=res::{res}")
+    core.set_output(res)
 
 
 if __name__ == "__main__":
