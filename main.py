@@ -5,7 +5,7 @@ from actions_toolkit import core
 
 def main():
     requests.get('https://httpbin.org/get?code=0')
-    username = core.get_input('username')
+    username = core.get_input('username', required=True)
     res = f"Hello {username}"
     core.set_output(res)
 
