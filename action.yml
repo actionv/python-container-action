@@ -7,11 +7,11 @@ branding:
 inputs:
   username:
     description: "Username"
-    require: true
+    required: true
   age:
     description: "Age"
-    require: false
-    default: 18
+    required: false
+    default: '18'
 outputs:
   res:
     description: "Result from the action"
