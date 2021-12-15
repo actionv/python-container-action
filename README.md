@@ -31,10 +31,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run action
+        name: Run action
 
         # 放置你的 Action 仓库
-        uses: username/myaction@main
+      - uses: username/myaction@main
 
         # Action 的输入参数
         with:
