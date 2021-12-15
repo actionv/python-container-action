@@ -13,5 +13,4 @@ jobs:
           username: yanglbme
 
       - name: Check outputs
-        run: |
-        echo "Outputs - ${{ steps.myaction.outputs.res }}"
+        run: echo "The result is ${{ steps.myaction.outputs.res }}"
