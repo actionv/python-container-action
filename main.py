@@ -9,6 +9,8 @@ def main():
     requests.get('https://httpbin.org/get?code=0')
     username = core.get_input('username')
     res = f"Hello {username}"
+    core.info("test")
+    core.set_command_echo(True)
     core.set_output('res', res)
     tz = timezone(timedelta(hours=+8))
     time = datetime.now(tz).strftime('%Y-%m-%d %H:%M:%S')
