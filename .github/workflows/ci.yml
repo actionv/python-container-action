@@ -8,6 +8,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run container action
+        id: myaction
         uses: actionv/python-container-action@main
         with:
           username: yanglbme
